@@ -1,0 +1,11 @@
+/* darkgreen: #344e41
+green: #3a5a40
+moodygreen: #588157
+lightgreen: #a3b18a
+gray: #dad7cd */
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
