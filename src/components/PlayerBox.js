@@ -28,11 +28,7 @@ const styles = {
 };
 
 const PlayerBox = ({ children, boxPosition = 'bottom' }) => {
-  return (
-    <div className="" style={styles[boxPosition]}>
-      {children}
-    </div>
-  );
+  return <div style={{ ...styles[boxPosition] }}>{children}</div>;
 };
 
 export default PlayerBox;
