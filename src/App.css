@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+:root {
+  --blue-10: #02033d;
+  --blue-9: #050638;
+  --blue-8: #023e8a;
+  --blue-7: #0077b6;
+  --blue-6: #0096c7;
+  --blue-5: #00b4d8;
+  --blue-4: #48cae4;
+  --blue-3: #90e0ef;
+  --blue-2: #ade8f4;
+  --blue-1: #caf0f8;
+}
+
+body {
+  font-family: 'Josefin Sans', cursive;
+  background: linear-gradient(
+    0deg,
+    var(--blue-10),
+    var(--blue-9),
+    var(--blue-10)
+  );
+}
+
+.main {
+  /* background: var(--blue-8); */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.players-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
