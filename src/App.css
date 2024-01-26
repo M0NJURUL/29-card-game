@@ -29,10 +29,18 @@ body {
   width: 100%;
   height: 100%;
   color: white;
+  border: 5px solid red;
 }
 
 .players-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  border: 10px solid black;
+}
+
+.single-card {
+  position: fixed;
+  left: 20px;
+  top: 20px
 }
