@@ -1,5 +1,20 @@
-.main {
-  text-align: center;
-  margin: 30px;
-  border: 5px solid black;
+.outer {
+  /* margin-bottom: 30px; */
+}
+
+.stack {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cardwrapper {
+  position: absolute;
+  display: block;
+}
+
+.playerInfo {
+  position: relative;
+  left: 120%;
+  top: 150px;
 }
