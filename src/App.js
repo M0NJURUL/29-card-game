@@ -7,26 +7,17 @@ import PlayerBox from './components/PlayerBox';
 
 import TestCard from './components/Card';
 
-
 function App() {
-
-  const type = "hearts";
+  const type = 'hearts';
   const value = 5;
 
   return (
     <div className="main">
-      <div className="players-wrapper">
+      <div>
         <PlayerBox>
           <PlayerProfile />
         </PlayerBox>
       </div>
-
-      {/* create required components for a single card */}
-      <div>
-        <TestCard value="h1"/>
-        {/* <Card value={value} type={type}/> */}
-      </div>
-
     </div>
   );
 }
