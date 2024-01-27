@@ -4,31 +4,31 @@ const styles = {
   bottom: {
     position: 'absolute',
     left: '50%',
-    bottom: 0,
-    transform: 'translateX(-50%)',
+    bottom: '30%',
+    transform: 'translateX(-150%)',
   },
   up: {
     position: 'absolute',
     left: '50%',
-    top: 0,
-    transform: 'translateX(-50%)',
+    top: '10%',
+    transform: 'translateX(-150%)',
   },
   left: {
     position: 'absolute',
-    left: 0,
+    left: '20%',
     top: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateY(-150%)',
   },
   right: {
     position: 'absolute',
-    right: 0,
+    right: '20%',
     top: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateY(-150%)',
   },
 };
 
 const PlayerBox = ({ children, boxPosition = 'bottom' }) => {
-  return <div style={{ ...styles[boxPosition] }}>{children}</div>;
+  return <div style={styles[boxPosition]}>{children}</div>;
 };
 
 export default PlayerBox;

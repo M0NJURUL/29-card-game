@@ -1,11 +1,11 @@
-import React from "react";
-import styles from "./Card.module.css";
+import React from 'react';
+import styles from './Card.module.css';
 import {
   BsFillSuitHeartFill,
   BsFillSuitDiamondFill,
   BsFillSuitSpadeFill,
   BsFillSuitClubFill,
-} from "react-icons/bs";
+} from 'react-icons/bs';
 
 const Logo = ({ suit }) => {
   const heart_icon = <BsFillSuitHeartFill />;
@@ -13,16 +13,13 @@ const Logo = ({ suit }) => {
   const diamond_icon = <BsFillSuitDiamondFill />;
   const club_icon = <BsFillSuitClubFill className={styles.black} />;
   if (suit == 'h') {
-    return <div>{heart_icon}</div>
-  }
-  else if (suit == 'd') {
-    return <div>{spade_icon}</div>
-  }
-  else if (suit == 'h') {
-    return <div>{diamond_icon}</div>
-  }
-  else if (suit == 'h') {
-    return <div>{heart_icon}</div>
+    return <div>{heart_icon}</div>;
+  } else if (suit == 'd') {
+    return <div>{spade_icon}</div>;
+  } else if (suit == 'h') {
+    return <div>{diamond_icon}</div>;
+  } else if (suit == 'h') {
+    return <div>{heart_icon}</div>;
   }
 };
 
@@ -40,7 +37,7 @@ const Values = ({ value }) => {
 
 const Mark = () => {
   return (
-    <div class="values-flex-container">
+    <div className="values-flex-container">
       <div>
         <Logo />
       </div>
@@ -56,7 +53,7 @@ const TestCard = ({ value }) => {
   return (
     <div className={styles.wholeCardGridContainer}>
       <Mark />
-      <Logo suit={suit}/>
+      <Logo suit={suit} />
       <Mark />
     </div>
   );

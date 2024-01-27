@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Card from '../components/Card';
 import styles from './PlayerProfile.module.css';
 
 const PlayerProfile = () => {
@@ -17,18 +18,45 @@ const PlayerProfile = () => {
     id: player1Id,
     name: 'Rafi Sakib',
     partnerId: player2Id,
-    leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7', 'ca']),
+    leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7']),
     usedCards: new Set([]),
   });
   const { tid, mates, bidder, bid, points } = team1;
   const { id, name, partnerId, leftCards, usedCards } = player1;
+  const findRotationAngle = (id) => {
+    const size = player1.leftCards.size;
+    const diff = parseInt(size / 2);
+    const angle = id - diff;
+    return angle * 10;
+  };
+  const findTranslateValue = (id) => {
+    const size = player1.leftCards.size;
+    const diff = parseInt(size / 2);
+    const value = Math.abs(id - diff);
+    return value ** 3;
+  };
   return (
-    <div className={styles.main}>
-      <h2>{name}</h2>
-      <div>
-        {Array.from(leftCards).map((card, index) => (
-          <span key={index}>{card} </span>
-        ))}
+    <div className={styles.outer}>
+      <h2 className={styles.playerInfo}>{name}</h2>
+      <div className={styles.stack}>
+        {Array.from(leftCards).map((card, index) => {
+          const translateY = `translateY(${findTranslateValue(index)}px)`;
+          const rotate = ` rotate(${findRotationAngle(index)}deg)`;
+          const translateX =
+            player1.leftCards.size % 2 ? '' : ' translateX(40%)';
+          return (
+            <div
+              key={index}
+              className={styles.cardwrapper}
+              style={{
+                left: `${index * 50}px`,
+                transform: translateY + rotate + translateX,
+              }}
+            >
+              <Card value={card} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -104,7 +104,8 @@ img {
 .wholeCardGridContainer {
   width: 75px;
   height: 100px;
-  position: fixed;
+  /* here fixed position stacks the cards one above another, so avoid using fixed */
+  /* position: fixed; */
   left: 20px;
   top: 20px;
   border: 1px solid black;
