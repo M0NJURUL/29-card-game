@@ -16,11 +16,16 @@ const PlayerProfile = () => {
   });
   const [player1, setPlayer1] = useState({
     id: player1Id,
-    name: 'Rafi Sakib',
+    // Longer or shorter names doesn't stays in the middle relative to the cards
+    name: 'Player XX',
     partnerId: player2Id,
     // tried to add the 8th card uwu, more than 7 or less than 7 card creates an unpleasant UI
+    // UWU - good job, problem solved
     // leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7', 'uwu']),
-    leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7']),
+    
+    //suit -> H, S, D, C
+    //types -> J, K, Q, A, 10, 9, 8, 7
+    leftCards: new Set(['H9', 'D8', 'S7', 'C6', 'H4', 'D3', 'S10', 'CK']), 
     usedCards: new Set([]),
   });
   const { tid, mates, bidder, bid, points } = team1;
