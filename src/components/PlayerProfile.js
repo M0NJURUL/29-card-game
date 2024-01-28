@@ -15,16 +15,9 @@ const PlayerProfile = () => {
   });
   const [player1, setPlayer1] = useState({
     id: player1Id,
-    // Longer or shorter names doesn't stays in the middle relative to the cards
-    name: 'Player XX',
+    name: 'Rafi Sakib',
     partnerId: player2Id,
-
-    // tried to add the 8th card uwu, more than 7 or less than 7 card creates an unpleasant UI
-    // UWU - good job, problem solved
-    // leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7', 'uwu']),
-    //suit -> H, S, D, C
-    //types -> J, K, Q, A, 10, 9, 8, 7
-    leftCards: new Set(['H9', 'D8', 'S7', 'C6', 'H4', 'D3', 'S10', 'CK']),
+    leftCards: new Set(['H10', 'D8', 'S7', 'C6', 'H4']),
     usedCards: new Set([]),
   });
 
@@ -40,7 +33,7 @@ const PlayerProfile = () => {
   };
 
   const findTranslateValue = (id) => {
-    const unit = 2;
+    const unit = 0.7;
     const diff = parseInt(leftCards.size / 2);
     const value = Math.abs(leftCards.size - diff) * Math.abs(id - diff + 0.5);
     return value * unit;
@@ -49,7 +42,7 @@ const PlayerProfile = () => {
   return (
     <div
       className={styles.main}
-      style={{ width: `${leftCards.size * 37.5 + 37.5}px` }}
+      style={{ width: `${leftCards.size * 30 + 60}px` }}
     >
       <div className={styles.stack}>
         {Array.from(leftCards).map((card, index) => {
@@ -60,7 +53,7 @@ const PlayerProfile = () => {
               key={index}
               className={styles.cardwrapper}
               style={{
-                left: `${index * -37.5}px`,
+                left: `${index * -60}px`,
                 transform: translateY + rotate,
               }}
             >
