@@ -25,7 +25,7 @@ const PlayerProfile = () => {
     
     //suit -> H, S, D, C
     //types -> J, K, Q, A, 10, 9, 8, 7
-    leftCards: new Set(['H9', 'D8', 'S7', 'C6', 'H4', 'D3', 'S10', 'CK']), 
+    leftCards: new Set(['H9', 'D8', 'S7', 'C6', 'H4', 'D3', 'S10', 'C10']), 
     usedCards: new Set([]),
   });
   const { tid, mates, bidder, bid, points } = team1;

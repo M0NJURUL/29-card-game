@@ -100,9 +100,9 @@ export function TenCard({ suit }) {
 export function KingCard({ suit }) {
   return (
     <div className={styles.logosGridContainer}>
-      {/* <div className="face">
-          <SuitLogo suit={suit}></SuitLogo>
-        </div> */}
+      <div className="face">
+        <SuitLogo suit={suit}></SuitLogo>
+      </div>
     </div>
   );
 }
