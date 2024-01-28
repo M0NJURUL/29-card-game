@@ -1,14 +1,19 @@
 .black {
   color: black;
+  font-weight: bold;
 }
 
-img {
-  height: 100%;
-  width: 100%;
+.red {
+  color: red;
+  font-weight: bold;
 }
 
 .smallLogo {
-  height: 25px;
+  height: 50%;
+}
+
+.extraSmallLogo {
+  height: 10px;
   width: auto;
 }
 
@@ -27,7 +32,7 @@ img {
 .place13,
 .place14,
 .place15 {
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .place1 {
@@ -49,7 +54,7 @@ img {
 .place5 {
   grid-row: 10 / 14;
   grid-column: 1 / 2;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .place6 {
@@ -71,7 +76,7 @@ img {
 .place10 {
   grid-row: 10 / 14;
   grid-column: 3 / 4;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .place11 {
@@ -102,8 +107,8 @@ img {
 }
 
 .wholeCardGridContainer {
-  width: 75px;
-  height: 100px;
+  width: 100px;
+  height: 120px;
   /* here fixed position stacks the cards one above another, so avoid using fixed */
   /* position: fixed; */
   left: 20px;
@@ -126,10 +131,12 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
 }
 
-.logoGridContainer {
+.logosGridContainer {
   grid-row: 2 / 7;
   grid-column: 2 / 5;
 
@@ -140,7 +147,7 @@ img {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  /* column-gap: 2px; */
   grid-template-rows: repeat(22, 1fr);
 }
 
@@ -153,5 +160,5 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
 }

@@ -17,7 +17,11 @@ const PlayerProfile = () => {
     id: player1Id,
     name: 'Rafi Sakib',
     partnerId: player2Id,
-    leftCards: new Set(['d9', 'sk', 'h9', 'hk', 'da', 'sq', 'ca', 'c7']),
+
+    // tried to add the 8th card uwu, more than 7 or less than 7 card creates an unpleasant UI
+    // leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7', 'uwu']),
+    leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7']),
+
     usedCards: new Set([]),
   });
 
