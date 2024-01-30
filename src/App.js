@@ -3,28 +3,21 @@ import PlayerProfile from './components/PlayerProfile';
 import './App.css';
 import PlayerBox from './components/PlayerBox';
 
-import TestCard from './components/card design/Card';
-
+import OwnPointSection from './components/OwnPointSection';
+import OppositePointSection from './components/OppositePointSection';
 
 function App() {
-
-  const type = "hearts";
-  const value = 5;
-
   return (
     <div className="main">
       <div className="players-wrapper">
         <PlayerBox>
+
+          <OwnPointSection />
+          <OppositePointSection />
+
           <PlayerProfile />
         </PlayerBox>
       </div>
-
-      {/* create required components for a single card */}
-      <div>
-        <TestCard value="h1"/>
-        {/* <Card value={value} type={type}/> */}
-      </div>
-
     </div>
   );
 }

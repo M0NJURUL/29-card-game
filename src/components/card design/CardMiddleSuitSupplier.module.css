@@ -1,3 +1,11 @@
+.flipped {
+  border: 10px solid white;
+  border-radius: 5px;
+  background: black;
+  height: 120px;
+  width: 90px;
+}
+
 .logosGridContainer {
   grid-row: 2 / 7;
   grid-column: 2 / 5;

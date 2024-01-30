@@ -1,10 +1,12 @@
 import React from "react"
 // import styles from "./CardMiddle.module.css";
 // import SuitLogo from "./SuitLogo";
-import { AceCard, TwoCard, ThreeCard, FourCard, FiveCard, SixCard, SevenCard, EightCard, NineCard, TenCard, KingCard, QueenCard, JackCard, JokerCard } from './CardMiddleSuitSupplier';
+import { AceCard, TwoCard, ThreeCard, FourCard, FiveCard, SixCard, SevenCard, EightCard, NineCard, TenCard, KingCard, QueenCard, JackCard, JokerCard, FlipCard } from './CardMiddleSuitSupplier';
 
 const CardMiddle = ({ suit , type}) => {
-  if (type === 'J')
+  if (type === 'X')
+    return <FlipCard suit={suit} type={type}/>
+  else if (type === 'J')
     return <JackCard suit={suit} type={type}/>
   else if (type === '9')
     return <NineCard suit={suit} type={type}/>

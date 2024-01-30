@@ -2,6 +2,13 @@ import React from "react";
 import styles from "./CardMiddleSuitSupplier.module.css";
 import SuitLogo from "./SuitLogo";
 
+export function FlipCard () {
+  console.log(10)
+  return (
+    <div className={styles.flipped}>aa</div>
+  );
+}
+
 export function JackCard({ suit }) {
   return (
     <div className={styles.logosGridContainer}>
