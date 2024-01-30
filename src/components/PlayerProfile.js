@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Card from '../components/Card';
+import Card from '../components/card design/Card';
 import styles from './PlayerProfile.module.css';
 
 const PlayerProfile = () => {
