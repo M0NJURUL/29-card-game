@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Card from '../components/Card';
 import styles from './CardWrapper.module.css';
 
 const CardWrapper = ({ id, card, player1, setPlayer1 }) => {
   const [isThrown, setIsThrown] = useState(false);
+  const ref = useRef();
 
   const findRotationAngle = (id) => {
     const unit = 10;
@@ -13,7 +14,7 @@ const CardWrapper = ({ id, card, player1, setPlayer1 }) => {
     return angle * unit + offsetForOdd;
   };
 
-  const findTranslateValue = (id) => {
+  const findTranslateYValue = (id) => {
     const unit = 1;
     const diff = parseInt(player1.leftCards.length / 2);
     const value =
@@ -21,37 +22,33 @@ const CardWrapper = ({ id, card, player1, setPlayer1 }) => {
     return value * unit;
   };
 
-  const translateY = `translateY(${
-    isThrown ? '-30vh' : `${findTranslateValue(id)}px`
+  const translateY = `translatey(${
+    isThrown ? '-30vh' : `${findTranslateYValue(id)}px`
   })`;
 
-  const rotate = ` rotate(${findRotationAngle(id)}deg)`;
+  // const scale = isThrown ? 'scale(1.1)' : '';
 
-  const cardThrow = (card) => {
-    console.log(card);
-    setIsThrown(true);
+  const rotate = ` rotate(${isThrown ? 45 : findRotationAngle(id)}deg)`;
 
-    // set player's value only when the whole term is finished
-    setTimeout(
-      setPlayer1((prev) => ({
-        ...prev,
-        leftCards: prev.leftCards.filter((c) => c !== card),
-        usedCards: [...prev.usedCards, card],
-      })),
-      3000
-    );
+  const cardThrow = () => {
+    setIsThrown((prev) => !prev);
+
+    // setPlayer1((prev) => ({
+    //   ...prev,
+    //   leftCards: prev.leftCards.filter((c) => c !== card),
+    //   usedCards: [...prev.usedCards, card],
+    // }));
   };
-
-  console.log(id, player1.usedCards, player1.leftCards);
 
   return (
     <div
+      ref={ref}
       className={styles.cardwrapper}
       style={{
-        left: `${id * -60}px`,
+        left: `${isThrown ? 100 : id * 30}px`,
         transform: translateY + rotate,
       }}
-      onClick={() => cardThrow(card)}
+      onClick={cardThrow}
     >
       <Card value={card} />
     </div>

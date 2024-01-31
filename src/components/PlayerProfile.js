@@ -20,19 +20,21 @@ const PlayerProfile = () => {
     leftCards: ['H10', 'D8', 'S7', 'C6', 'H4', 'CQ', 'CK', 'HK'],
     usedCards: [],
   });
-
   const { tid, mates, bidder, bid, points } = team1;
   const { id, name, partnerId, leftCards, usedCards } = player1;
   const tempCards = [...leftCards];
+
   return (
     <div
       style={{
-        width: `${leftCards.length * 30 + 60}px`,
+        width: '100%',
         transition: 'all 0.3s ease',
-        background: 'green',
       }}
     >
-      <div className={styles.stack}>
+      <div
+        className={styles.stack}
+        style={{ width: `${leftCards.length * 30 + 60}px` }}
+      >
         {tempCards.map((card, index) => {
           return (
             <CardWrapper

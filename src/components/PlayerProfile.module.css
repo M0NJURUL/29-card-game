@@ -2,14 +2,12 @@
   height: 100%;
   display: flex;
   position: relative;
-  top: -50px;
+  top: -170px;
+  background: red;
 }
 
 .playerInfo {
-  background: red;
-  /* text-align: center; */
-  /* position: relative; */
+  text-align: center;
+  position: relative;
   top: -15px;
-  width: 540px;
-  margin: 0 auto;
 }
