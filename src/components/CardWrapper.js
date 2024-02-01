@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import Card from '../components/Card';
+import Card from '../components/card design/Card';
 import styles from './CardWrapper.module.css';
 
 const CardWrapper = ({ id, card, player1, setPlayer1 }) => {

@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
+import React from 'react';
+import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Card from '../components/card design/Card';
->>>>>>> card-design
 import styles from './PlayerProfile.module.css';
 import CardWrapper from './CardWrapper';
 
