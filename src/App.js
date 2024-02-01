@@ -1,16 +1,11 @@
 import React from 'react';
 import PlayerProfile from './components/PlayerProfile';
-import './App.css';
 import PlayerBox from './components/PlayerBox';
-
-// import SingleCard from './components/Card';
-
-import TestCard from './components/Card';
+import './App.css';
+import { rank } from './utils/data';
 
 function App() {
-  const type = 'hearts';
-  const value = 5;
-
+  console.log(rank);
   return (
     <div className="main">
       <div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Card from '../components/Card';
 import styles from './PlayerProfile.module.css';
+import CardWrapper from './CardWrapper';
 
 const PlayerProfile = () => {
   const player1Id = 'player1';
@@ -17,48 +17,33 @@ const PlayerProfile = () => {
     id: player1Id,
     name: 'Rafi Sakib',
     partnerId: player2Id,
-    leftCards: new Set(['H10', 'D8', 'S7', 'C6', 'H4']),
-    usedCards: new Set([]),
+    leftCards: ['H10', 'D8', 'S7', 'C6', 'H4', 'CQ', 'CK', 'HK'],
+    usedCards: [],
   });
-
   const { tid, mates, bidder, bid, points } = team1;
   const { id, name, partnerId, leftCards, usedCards } = player1;
-
-  const findRotationAngle = (id) => {
-    const unit = 10;
-    const offsetForOdd = leftCards.size % 2 ? 0 : unit / 2;
-    const diff = parseInt(leftCards.size / 2);
-    const angle = id - diff;
-    return angle * unit + offsetForOdd;
-  };
-
-  const findTranslateValue = (id) => {
-    const unit = 0.7;
-    const diff = parseInt(leftCards.size / 2);
-    const value = Math.abs(leftCards.size - diff) * Math.abs(id - diff + 0.5);
-    return value * unit;
-  };
+  const tempCards = [...leftCards];
 
   return (
     <div
-      className={styles.main}
-      style={{ width: `${leftCards.size * 30 + 60}px` }}
+      style={{
+        width: '100%',
+        transition: 'all 0.3s ease',
+      }}
     >
-      <div className={styles.stack}>
-        {Array.from(leftCards).map((card, index) => {
-          const translateY = `translateY(${findTranslateValue(index)}px)`;
-          const rotate = ` rotate(${findRotationAngle(index)}deg)`;
+      <div
+        className={styles.stack}
+        style={{ width: `${leftCards.length * 30 + 60}px` }}
+      >
+        {tempCards.map((card, index) => {
           return (
-            <div
+            <CardWrapper
               key={index}
-              className={styles.cardwrapper}
-              style={{
-                left: `${index * -60}px`,
-                transform: translateY + rotate,
-              }}
-            >
-              <Card value={card} />
-            </div>
+              id={index}
+              card={card}
+              player1={player1}
+              setPlayer1={setPlayer1}
+            />
           );
         })}
       </div>

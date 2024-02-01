@@ -1,18 +1,13 @@
-.main {
-}
-
 .stack {
   height: 100%;
   display: flex;
   position: relative;
-  top: -50px;
-}
-
-.cardwrapper {
-  margin: 0 auto;
-  position: relative;
+  top: -170px;
+  background: red;
 }
 
 .playerInfo {
   text-align: center;
+  position: relative;
+  top: -15px;
 }
