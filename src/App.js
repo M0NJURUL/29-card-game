@@ -1,15 +1,19 @@
 import React from 'react';
 import PlayerProfile from './components/PlayerProfile';
 import PlayerBox from './components/PlayerBox';
-import './App.css';
-import { rank } from './utils/data';
+
+import OwnPointSection from './components/OwnPointSection';
+import OppositePointSection from './components/OppositePointSection';
 
 function App() {
-  console.log(rank);
   return (
     <div className="main">
       <div>
         <PlayerBox>
+
+          <OwnPointSection />
+          <OppositePointSection />
+
           <PlayerProfile />
         </PlayerBox>
       </div>

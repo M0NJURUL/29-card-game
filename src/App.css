@@ -15,19 +15,19 @@
 
 body {
   font-family: 'Josefin Sans', cursive;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     var(--blue-10),
     var(--blue-9),
     var(--blue-10)
-  );
+  ); */
 }
 
 .main {
   background: linear-gradient(
     90deg,
     var(--blue-10),
-    var(--blue-9),
+    var(--blue-8),
     var(--blue-10)
   );
   position: fixed;

@@ -3,6 +3,7 @@
   grid-column: 1 / 2;
 
   border: 1px solid white;
+  border-radius: 5px;
   width: 100%;
   display: flex;
   flex-direction: column;
