@@ -1,23 +1,67 @@
 .ownTeam {
-    border: 2px solid green;
+  border: 2px solid green;
 
-    width: 150px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
-.positive, .negative {
-    position: absolute;
-}
-
-.positive {
-    z-index: 0;
-}
-
+.positive,
 .negative {
-    z-index: -1;
+  position: absolute;
 }
 
-.flipped {
-    z-index: 10;
+.top {
+  z-index: 5;
 }
 
+.flipped0,
+.flipped1,
+.flipped2,
+.flipped3,
+.flipped4,
+.flipped5,
+.flipped6 {
+  position: absolute;
+  z-index: 10;
+}
+
+.flipped0 {
+  rotate: -10deg;
+  top: 6%;
+}
+
+.flipped1 {
+  rotate: 50deg;
+  left: 11%;
+  top: 2%;
+}
+
+.flipped2 {
+  rotate: 80deg;
+  left: 11%;
+  top: 13%;
+}
+
+.flipped3 {
+  rotate: 5deg;
+  left: 20%;
+}
+
+.flipped4 {
+  rotate: 93deg;
+  left: 4%;
+  top: 24%;
+}
+
+.flipped5 {
+  rotate: 55deg;
+  left: 15%;
+  top: 28%;
+}
+
+.flipped6 {
+  transition: ease 2s;
+  rotate: 58deg;
+  left: 16%;
+  top: 40%;
+}

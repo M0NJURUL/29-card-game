@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SuitLogo.module.css';
+import styles from './SmallSuitLogo.module.css';
 import {
   BsFillSuitHeartFill,
   BsFillSuitDiamondFill,
@@ -7,11 +7,11 @@ import {
   BsFillSuitClubFill,
 } from "react-icons/bs";
 
-const SuitLogo = ({ suit }) => {
-    const heart_icon = <BsFillSuitHeartFill className={styles.red}/>;
-    const spade_icon = <BsFillSuitSpadeFill className={styles.black} />;
-    const diamond_icon = <BsFillSuitDiamondFill className={styles.red}/>;
-    const club_icon = <BsFillSuitClubFill className={styles.black} />;
+const SmallSuitLogo = ({ suit }) => {
+    const heart_icon = <BsFillSuitHeartFill className={styles.redAndSmall}/>;
+    const spade_icon = <BsFillSuitSpadeFill className={styles.blackAndSmall} />;
+    const diamond_icon = <BsFillSuitDiamondFill className={styles.redAndSmall}/>;
+    const club_icon = <BsFillSuitClubFill className={styles.blackAndSmall} />;
     // console.log(typeof(suit));
     if (suit === 'H') {
       return <div>{heart_icon}</div>
@@ -27,4 +27,4 @@ const SuitLogo = ({ suit }) => {
     }
   };
 
-export default SuitLogo;
+export default SmallSuitLogo;
