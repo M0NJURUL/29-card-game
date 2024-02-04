@@ -9,6 +9,7 @@ const TestCard = ({ value }) => {
   const type = value.substring(1);
 
   return (
+    
     <div className={styles.wholeCardGridContainer}>
       <CardTopLeft suit={suit} type={type}/>
       <CardMiddle suit={suit} type={type}/>
