@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './CardBottomRight.module.css';
-import SuitLogo from './SuitLogo';
 import SmallSuitLogo from './SmallSuitLogo';
 import TypeNameOrNum from './TypeNameOrNum';
 

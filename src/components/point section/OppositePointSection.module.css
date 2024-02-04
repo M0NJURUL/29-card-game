@@ -1,6 +1,5 @@
-.ownTeam {
+.oppositeTeam {
   border: 2px solid green;
-
   width: 200px;
   height: 200px;
 }
@@ -21,47 +20,48 @@
 .flipped4,
 .flipped5,
 .flipped6 {
-  position: absolute;
+  position: relative;
   z-index: 10;
+  transition: ease 2s;
 }
 
 .flipped0 {
   rotate: -10deg;
-  top: 6%;
+  top: 4px;
 }
 
 .flipped1 {
   rotate: 50deg;
-  left: 11%;
-  top: 2%;
+  left: 0px;
+  top: 50px;
 }
 
 .flipped2 {
   rotate: 80deg;
-  left: 11%;
-  top: 13%;
+  left: -30px;
+  top: 77px;
 }
 
 .flipped3 {
   rotate: 5deg;
-  left: 20%;
+  left: 46px;
+  top: 10px;
 }
 
 .flipped4 {
   rotate: 93deg;
-  left: 4%;
-  top: 24%;
+  left: -50px;
+  top: 114px;
 }
 
 .flipped5 {
-  rotate: 55deg;
-  left: 15%;
-  top: 28%;
+  rotate: 50deg;
+  left: 20px;
+  top: 101px;
 }
 
 .flipped6 {
-  transition: ease 2s;
   rotate: 58deg;
-  left: 16%;
-  top: 40%;
+  left: 20px;
+  top: 130px;
 }
