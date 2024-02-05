@@ -7,6 +7,7 @@ import Points from "./components/point section/Points";
 import OwnPointSection from "./components/point section/OwnPointSection";
 import OppositePointSection from "./components/point section/OppositePointSection";
 
+
 function App() {
   return (
     <div className="main">

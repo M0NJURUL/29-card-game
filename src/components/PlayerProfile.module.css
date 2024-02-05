@@ -1,20 +1,13 @@
-.outer {
-  /* margin-bottom: 30px; */
-}
-
 .stack {
-  width: 100%;
   height: 100%;
+  display: flex;
   position: relative;
-}
-
-.cardwrapper {
-  position: absolute;
-  display: block;
+  top: -170px;
+  background: red;
 }
 
 .playerInfo {
+  text-align: center;
   position: relative;
-  left: 120%;
-  top: 150px;
+  top: -15px;
 }

@@ -4,26 +4,26 @@ const styles = {
   bottom: {
     position: 'absolute',
     left: '50%',
-    bottom: '30%',
-    transform: 'translateX(-150%)',
+    bottom: 0,
+    transform: 'translateX(-50%)',
   },
   up: {
     position: 'absolute',
     left: '50%',
-    top: '10%',
-    transform: 'translateX(-150%)',
+    top: 0,
+    transform: 'translateX(-50%)',
   },
   left: {
     position: 'absolute',
-    left: '20%',
+    left: 0,
     top: '50%',
-    transform: 'translateY(-150%)',
+    transform: 'translateY(-50%)',
   },
   right: {
     position: 'absolute',
-    right: '20%',
+    right: 0,
     top: '50%',
-    transform: 'translateY(-150%)',
+    transform: 'translateY(-50%)',
   },
 };
 
