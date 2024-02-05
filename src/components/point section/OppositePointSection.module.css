@@ -1,0 +1,67 @@
+.oppositeTeam {
+  border: 2px solid green;
+  width: 200px;
+  height: 200px;
+}
+
+.positive,
+.negative {
+  position: absolute;
+}
+
+.top {
+  z-index: 5;
+}
+
+.flipped0,
+.flipped1,
+.flipped2,
+.flipped3,
+.flipped4,
+.flipped5,
+.flipped6 {
+  position: relative;
+  z-index: 10;
+  transition: ease 2s;
+}
+
+.flipped0 {
+  rotate: -10deg;
+  top: 4px;
+}
+
+.flipped1 {
+  rotate: 50deg;
+  left: 0px;
+  top: 50px;
+}
+
+.flipped2 {
+  rotate: 80deg;
+  left: -30px;
+  top: 77px;
+}
+
+.flipped3 {
+  rotate: 5deg;
+  left: 46px;
+  top: 10px;
+}
+
+.flipped4 {
+  rotate: 93deg;
+  left: -50px;
+  top: 114px;
+}
+
+.flipped5 {
+  rotate: 50deg;
+  left: 20px;
+  top: 101px;
+}
+
+.flipped6 {
+  rotate: 58deg;
+  left: 20px;
+  top: 130px;
+}
