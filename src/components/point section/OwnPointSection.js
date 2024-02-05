@@ -4,7 +4,7 @@ import Card from "../card design/Card";
 
 const OwnPointSection = ({ term_result, point }) => {
   // total point calculation
-  const total_point = 1;
+  const total_point = 2;
 
   if (Math.abs(total_point) === 0) {
     return (
