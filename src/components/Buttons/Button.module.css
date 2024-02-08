@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 8px 12px !important;
+}
+
+.withoutAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 8px !important;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.action {
+  padding-right: 10px !important;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
