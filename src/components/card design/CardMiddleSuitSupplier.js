@@ -2,9 +2,25 @@ import React from "react";
 import styles from "./CardMiddleSuitSupplier.module.css";
 import SuitLogo from "./SuitLogo";
 
-export function FlipCard () {
+export function FlipCard() {
   return (
-    <div className={styles.flipped}>aa</div>
+    <svg className={styles.flipped} width="100%" height="100%">
+        <defs>
+          <pattern
+            id="B1"
+            width="7.5"
+            height="7.5"
+            patternUnits="userSpaceOnUse"
+          >
+            <path d="M3 0L6 3L3 6L0 3Z" fill="black"></path>
+          </pattern>
+        </defs>
+        <rect
+          fill="url(#B1)"
+          width="150"
+          height="150"
+        ></rect>
+      </svg>
   );
 }
 

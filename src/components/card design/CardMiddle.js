@@ -4,7 +4,7 @@ import React from "react"
 import { AceCard, TwoCard, ThreeCard, FourCard, FiveCard, SixCard, SevenCard, EightCard, NineCard, TenCard, KingCard, QueenCard, JackCard, JokerCard, FlipCard } from './CardMiddleSuitSupplier';
 
 const CardMiddle = ({ suit , type}) => {
-  if (type === 'X')
+  if (suit === 'X')
     return <FlipCard suit={suit} type={type}/>
   else if (type === 'J')
     return <JackCard suit={suit} type={type}/>
