@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Card from '../components/card design/Card';
 import styles from './PlayerProfile.module.css';
+import CardWrapper from './CardWrapper';
 
 const PlayerProfile = () => {
   const player1Id = 'player1';
@@ -16,55 +18,39 @@ const PlayerProfile = () => {
   });
   const [player1, setPlayer1] = useState({
     id: player1Id,
-    // Longer or shorter names doesn't stays in the middle relative to the cards
-    name: 'Player XX',
+    name: 'Rafi Sakib',
     partnerId: player2Id,
-    // tried to add the 8th card uwu, more than 7 or less than 7 card creates an unpleasant UI
-    // UWU - good job, problem solved
-    // leftCards: new Set(['h8', 'd9', 'sk', 'cq', 'hk', 'dj', 's7', 'uwu']),
-    
-    //suit -> H, S, D, C
-    //types -> J, K, Q, A, 10, 9, 8, 7
-    leftCards: new Set(['H9', 'D8', 'S7', 'C6', 'H4', 'D3', 'S10', 'CK']), 
-    usedCards: new Set([]),
+    leftCards: ['H10', 'D8', 'S7', 'C6', 'H4', 'CQ', 'CK', 'HK'],
+    usedCards: [],
   });
   const { tid, mates, bidder, bid, points } = team1;
   const { id, name, partnerId, leftCards, usedCards } = player1;
-  const findRotationAngle = (id) => {
-    const size = player1.leftCards.size;
-    const diff = parseInt(size / 2);
-    const angle = id - diff;
-    return angle * 10;
-  };
-  const findTranslateValue = (id) => {
-    const size = player1.leftCards.size;
-    const diff = parseInt(size / 2);
-    const value = Math.abs(id - diff);
-    return value ** 3;
-  };
+  const tempCards = [...leftCards];
+
   return (
-    <div className={styles.outer}>
-      <h2 className={styles.playerInfo}>{name}</h2>
-      <div className={styles.stack}>
-        {Array.from(leftCards).map((card, index) => {
-          const translateY = `translateY(${findTranslateValue(index)}px)`;
-          const rotate = ` rotate(${findRotationAngle(index)}deg)`;
-          const translateX =
-            player1.leftCards.size % 2 ? '' : ' translateX(40%)';
+    <div
+      style={{
+        width: '100%',
+        transition: 'all 0.3s ease',
+      }}
+    >
+      <div
+        className={styles.stack}
+        style={{ width: `${leftCards.length * 30 + 60}px` }}
+      >
+        {tempCards.map((card, index) => {
           return (
-            <div
+            <CardWrapper
               key={index}
-              className={styles.cardwrapper}
-              style={{
-                left: `${index * 50}px`,
-                transform: translateY + rotate + translateX,
-              }}
-            >
-              <Card value={card} />
-            </div>
+              id={index}
+              card={card}
+              player1={player1}
+              setPlayer1={setPlayer1}
+            />
           );
         })}
       </div>
+      <h2 className={styles.playerInfo}>{name}</h2>
     </div>
   );
 };
