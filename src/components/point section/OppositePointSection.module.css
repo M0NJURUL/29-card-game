@@ -1,7 +1,10 @@
 .oppositeTeam {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 200px;
   height: 200px;
+  position: relative;
+  right: -2vw;
+  bottom:2vh;
 }
 
 .positive,
