@@ -4,7 +4,7 @@ import Button from '../Buttons/Button';
 import { IoClose } from 'react-icons/io5';
 
 const Modal = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
   };

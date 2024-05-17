@@ -11,23 +11,23 @@ const styles = {
     position: 'absolute',
     left: '50%',
     top: 0,
-    transform: 'translateX(-50%)',
+    transform: 'translateX(-50%) rotate(180deg)',
   },
   left: {
     position: 'absolute',
-    left: 0,
+    left: '-10%',
     top: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateY(-50%) rotate(90deg)',
   },
   right: {
     position: 'absolute',
-    right: 0,
+    right: '-10%',
     top: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateY(-50%) rotate(-90deg)',
   },
 };
 
-const PlayerBox = ({ children, boxPosition = 'bottom' }) => {
+const PlayerBox = ({ children, boxPosition }) => {
   return <div style={styles[boxPosition]}>{children}</div>;
 };
 

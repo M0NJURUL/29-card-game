@@ -17,7 +17,16 @@ function App() {
         <OppositePointSection />
       </Points>
       <div className="players-wrapper">
-        <PlayerBox>
+        <PlayerBox boxPosition="bottom">
+          <PlayerProfile />
+        </PlayerBox>
+        <PlayerBox boxPosition="up">
+          <PlayerProfile />
+        </PlayerBox>
+        <PlayerBox boxPosition="left">
+          <PlayerProfile />
+        </PlayerBox>
+        <PlayerBox boxPosition="right">
           <PlayerProfile />
         </PlayerBox>
       </div>
